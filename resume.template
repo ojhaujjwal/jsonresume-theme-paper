@@ -121,6 +121,32 @@
               </div>
             </section>
           {{/if}}
+
+          {{#resume.basics}}
+            <!-- PROFILES -->
+            {{#if profiles.length}}
+              <section class="content profiles">
+                <div class="row">
+                  <div class="content-cat">
+                    Profiles
+                  </div>
+                  <div class="content-text profiles-listing">
+                    <ul>
+                      {{#each profiles}}
+                        {{#if network}}
+                          <li>
+                            <a href="{{url}}" target="_blank">
+                              {{network}}
+                            </a>
+                          </li>
+                        {{/if}}
+                      {{/each}}
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            {{/if}}
+          {{/resume.basics}}
         
           {{#if resume.work.length}}
             {{#foreach resume.work}}
@@ -297,31 +323,6 @@
               </div>
             </section>
           {{/if}}
-          {{#resume.basics}}
-            <!-- PROFILES -->
-            {{#if profiles.length}}
-              <section class="content profiles">
-                <div class="row">
-                  <div class="content-cat">
-                    Profiles
-                  </div>
-                  <div class="content-text profiles-listing">
-                    <ul>
-                      {{#each profiles}}
-                        {{#if network}}
-                          <li>
-                            <a href="{{url}}" target="_blank">
-                              {{network}}
-                            </a>
-                          </li>
-                        {{/if}}
-                      {{/each}}
-                    </ul>
-                  </div>
-                </div>
-              </section>
-            {{/if}}
-          {{/resume.basics}}
 
           {{#if resume.interests.length}}
             <section class="content">
